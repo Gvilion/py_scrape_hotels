@@ -10,7 +10,11 @@ class SeleniumMiddleware(HotelScrapperDownloaderMiddleware):
         options = webdriver.ChromeOptions()
         options.add_argument("--headless")
         options.add_argument(
-            "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36")
+            "--user-agent=Mozilla/5.0 "
+            "(Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/116.0.0.0 Safari/537.36"
+        )
         self.driver = webdriver.Chrome(options=options)
         self.driver.set_window_size(1920, 1080, self.driver.window_handles[0])
 
